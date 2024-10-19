@@ -11,6 +11,10 @@ After a successfull login a  Welcome@ user messege will be displayed
 Below that message list of cards will be displayed.
 ## Note: the cards are not clickable( when you click  AI Chatbot it will not redirect the page). for the easey access the tools are displayed in the sidebar, you can click on that to open the page
 
+
+## To run this in streamlit first activate your environment using command: myenv\Scripts\activate and then enter this command to run Home page : streamlit run Home.py. 
+the home page will run in the browser or you can aceess it with the link given in IDE, in my case i have used VS Code, so it gave me link like this :Local URL: http://localhost:8501. press ctrl and click this link to open.
+
 # Sidebar contains 
 
   ## 1) AI Chatbot.
