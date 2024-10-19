@@ -3,6 +3,17 @@ from pymongo import MongoClient
 import hashlib
 import card  # Import your card.py module
 
+from pymongo.errors import ServerSelectionTimeoutError
+
+try:
+    client = pymongo.MongoClient(mongodb://localhost:27017/, serverSelectionTimeoutMS=5000)
+    db = client["ninja_gpt"]
+    # Test the connection
+    client.server_info()  # Will throw an exception if not connected
+    print("MongoDB connection successful!")
+except ServerSelectionTimeoutError as err:
+    print(f"Connection failed: {err}")
+
 # MongoDB setup
 client = MongoClient("mongodb://localhost:27017/")
 db = client["ninja_gpt"]
