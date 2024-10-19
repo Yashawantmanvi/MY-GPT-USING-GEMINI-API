@@ -6,7 +6,7 @@ import card  # Import your card.py module
 from pymongo.errors import ServerSelectionTimeoutError
 
 try:
-    client = pymongo.MongoClient(mongodb://localhost:27017/, serverSelectionTimeoutMS=5000)
+    client = pymongo.MongoClient("mongodb://localhost:27017/", serverSelectionTimeoutMS=5000)
     db = client["ninja_gpt"]
     # Test the connection
     client.server_info()  # Will throw an exception if not connected
